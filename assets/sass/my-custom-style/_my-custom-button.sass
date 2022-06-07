@@ -1,0 +1,72 @@
+.el-button
+  position: relative
+  width: 200px
+  height: 42px
+  box-shadow: 0px 18px 15px -12px rgb(0 0 0 / 25%)
+  font-weight: 400
+  color: #f8f8f8
+  z-index: 0
+
+  &_gradient-animate
+    min-width: 200px
+    border: none !important
+    color: #f8f8f8 !important
+    background: linear-gradient(to left,#70B6EA ,#F87777 ) !important
+    overflow: hidden
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 300px
+      height: 42px
+      background: -webkit-gradient(linear, right top, left top, from(#1366ff), to(#ff0b6d))
+      background: -o-linear-gradient(right, #1366ff, #ff0b6d)
+      background: linear-gradient(to left, #1366ff, #ff0b6d)
+      z-index: -1
+      border-radius: 60px
+      -webkit-transform: scaleX(0)
+      -ms-transform: scaleX(0)
+      transform: scaleX(0)
+      -webkit-transform-origin: right
+      -ms-transform-origin: right
+      transform-origin: right
+      -webkit-transition: -webkit-transform .8s ease-in-out
+      transition: -webkit-transform .8s ease-in-out
+      -o-transition: transform .8s ease-in-out
+      transition: transform .8s ease-in-out
+      transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out
+
+    &:hover::before
+      -webkit-transform: scaleX(1)
+      -ms-transform: scaleX(1)
+      transform: scaleX(1)
+      -webkit-transform-origin: left
+      -ms-transform-origin: left
+      transform-origin: left
+
+  &_border-blue
+    border: 2px solid #70B6EA !important
+
+    &:hover
+      background-color: #70B6EA !important
+
+    a
+      color: #1A1A1A
+
+  &_form
+    max-width: 250px
+    width: 100%
+
+    &:hover
+      transition: .3s
+
+  &_order-consult
+    max-width: 230px
+    width: 100%
+
+    &:hover
+      background-color: #EF4545 !important
+
+
